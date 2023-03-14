@@ -1,0 +1,3 @@
+{
+    "copy-resources": "cp -a ./src/. _template_/template/src &&  cp -a ./public/. _template_/template/public && cp template.json _template_/ && cp template-package.json _template_/package.json && cp .gitignore _template_/template/gitignore && cp ./{.eslintrc.json,.prettierrc.json} _template_/template/ "
+}

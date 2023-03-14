@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Path: styles\components\button.css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@layer base {
+    * {
+        @apply text-dark dark:text-light;
+    }
+    body {
+        @apply bg-light dark:bg-dark;
+    }
+    p {
+        @apply text-[14px] lg:text-sm font-light opacity-60;
+    }
+    h1 {
+        @apply text-[21px] lg:text-xl font-semibold;
+    }
+    h2 {
+        @apply text-[18px] lg:text-lg font-medium;
+    }
+    span {
+        @apply text-[14px] lg:text-sm;
+    }
+    a {
+        @apply text-[14px] lg:text-sm text-primary font-normal;
+    }
+    label {
+        @apply text-[14px] lg:text-sm font-normal opacity-60;
+    }
+    li {
+        @apply text-[14px] lg:text-sm font-normal;
+    }
+    
+    
+    /* Input */
+    input {
+        @apply focus:outline-none text-dark text-[14px] lg:text-sm px-4 py-3;
+    }
+    
+    /* table */
+    td, th {
+        @apply text-[14px] lg:text-sm p-4 text-center;
+    }
+}
+
+/* css */
+input[type=number] {
+    -moz-appearance: textfield;
+    /* Firefox */
+    -webkit-appearance: textfield;
+    /* Safari and Chrome */
+    -ms-appearance: textfield;
+    /* Edge */
+}
+.custom-container {
+    @apply w-full lg:w-11/12 bg-light-plus dark:bg-dark-plus py-6 px-8 ;
+}
+.transition-ease {
+    transition: all 0.3s ease;
+}
+.hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    scrollbar-color: transparent transparent;
+}
+.customDropShadow {
+    /* add a drop shadow */
+    filter: drop-shadow(0.25rem 1rem 0.25rem #00E7FF45);
+}
+.wish-card-gradient {
+    background: linear-gradient(180deg, #ffffff00 0%, #ececec 100%);
+}
+.placeholder-image-gradient {
+    background: linear-gradient(120deg, #3B82F6 0%, #3e3bf6 100%);
+}
+
+/* modals */
+.backdrop {
+    @apply fixed inset-0 bg-black bg-opacity-50 z-50;
+}
+.modal {
+    @apply bg-light dark:bg-dark rounded-xl p-8;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    @apply bg-light-plus dark:bg-dark-plus;
+}
+::-webkit-scrollbar-track {
+    @apply bg-transparent;
+}
