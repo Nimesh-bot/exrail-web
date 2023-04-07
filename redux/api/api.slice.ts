@@ -5,7 +5,7 @@ import { authorize, unauthorize } from "../features/auth/auth.slice";
 import { RootState } from "../store";
 
 const baseQuery = fetchBaseQuery({
-    baseUrl: 'http://localhost:8000/api/',
+    baseUrl: 'https://api-exrail.onrender.com/api/',
     prepareHeaders: (headers, { getState }) => {
       const token = (getState() as RootState).auth.access;
       if (token) {
