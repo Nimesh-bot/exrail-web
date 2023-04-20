@@ -73,5 +73,10 @@ export const userApi = createApi({
     }),
 });
 
-export const { useGetUserByEmailQuery, useGetUserDetailsQuery, useGetUserIncomeQuery, useUpdateUserBalanceMutation, useUpdateUserImageMutation, useUpdateUserNameMutation, useChangePasswordMutation } = userApi;
+export const { 
+    useGetUserByEmailQuery, useGetUserDetailsQuery, 
+    useGetUserIncomeQuery, useUpdateUserBalanceMutation, 
+    useUpdateUserImageMutation, useUpdateUserNameMutation, 
+    useChangePasswordMutation 
+} = userApi;
 

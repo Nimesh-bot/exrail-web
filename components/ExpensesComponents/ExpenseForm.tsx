@@ -58,6 +58,7 @@ const ExpenseForm = ({ selected, values, setValues }: IFormProps) => {
                 <InputWithIcon 
                     icon={<p>Rs.</p>}
                     placeholder='Amount'
+                    type='number'
                     value={
                         selected === 0 ?
                         values.food!.toString()

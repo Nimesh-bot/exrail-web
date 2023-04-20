@@ -6,6 +6,7 @@ interface BtnProps {
   onClick?: any
   additionalclassName?: string
   icon?: JSX.Element 
+  type?: 'button' | 'submit' | 'reset'
 }
 
 const ShineWrapper = styled.div`
@@ -71,9 +72,9 @@ const Loader = styled.div`
   }
 `
 
-const PrimaryButton: FC<BtnProps> = ({ text, onClick, additionalclassName }) => {
+const PrimaryButton: FC<BtnProps> = ({ text, onClick, additionalclassName, type }) => {
   return (
-    <Btn onClick={onClick} className={`bg-primary ${additionalclassName}`}>
+    <Btn onClick={onClick} type={type} className={`bg-primary ${additionalclassName}`}>
         <BtnText>
             {text}
         </BtnText>
@@ -86,9 +87,9 @@ const PrimaryButton: FC<BtnProps> = ({ text, onClick, additionalclassName }) => 
   )
 }
 
-const PromiseButton: FC<BtnProps> = ({ text, onClick, additionalclassName }) => {
+const PromiseButton: FC<BtnProps> = ({ text, onClick, additionalclassName, type }) => {
   return (
-    <Btn onClick={onClick} className={`bg-primary ${additionalclassName}`}>
+    <Btn onClick={onClick} type={type} className={`bg-primary ${additionalclassName}`}>
         <div className='flex gap-x-4 items-center'>
           <Loader />
           {
@@ -100,17 +101,17 @@ const PromiseButton: FC<BtnProps> = ({ text, onClick, additionalclassName }) => 
   )
 }
 
-const FlatButton: FC<BtnProps> = ({ text, onClick, additionalclassName }) => {
+const FlatButton: FC<BtnProps> = ({ text, onClick, additionalclassName, type }) => {
     return (
-        <button className={`w-fit bg-transparent text-primary text-[14px] lg:text-sm font-medium ${additionalclassName}`} onClick={onClick}>
+        <button className={`w-fit bg-transparent text-primary text-[14px] lg:text-sm font-medium ${additionalclassName}`} onClick={onClick} type={type}>
             {text}
         </button>
     )
 }
 
-const FlatIconButton: FC<BtnProps> = ({ icon, onClick, additionalclassName }) => {
+const FlatIconButton: FC<BtnProps> = ({ icon, onClick, additionalclassName, type }) => {
   return (
-    <button className={`w-fit bg-transparent text-primary text-[14px] lg:text-sm font-medium ${additionalclassName}`} onClick={onClick}>
+    <button className={`w-fit bg-transparent text-primary text-[14px] lg:text-sm font-medium ${additionalclassName}`} onClick={onClick} type={type}>
       {icon}
     </button>
   )

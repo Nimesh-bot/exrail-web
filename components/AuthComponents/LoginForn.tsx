@@ -94,18 +94,25 @@ const LoginForn = ({ handleSwitch }: ILoginProps) => {
                     setShow={() => setShow((prev) => !prev)}
                     error={errors.password}
                 />
-                <FlatButton text='Forgot Password?' additionalclassName='text-primary dark:text-primary-500' onClick={() => router.push('/auth/forgot')} />
+                <FlatButton 
+                    text='Forgot Password?' 
+                    additionalclassName='text-primary dark:text-primary-500' 
+                    onClick={() => router.push('/auth/forgot')} 
+                    type='button'
+                />
                 {
                     isLoading ?
                     <PromiseButton 
                         text=''
                         additionalclassName='mt-4'
+                        type='button'
                     />
                     :
                     <PrimaryButton 
                         text='Login' 
                         additionalclassName='mt-4'   
                         onClick={onSubmit}
+                        type='submit'
                     />
                 }
             </form>
